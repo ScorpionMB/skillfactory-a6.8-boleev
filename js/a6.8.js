@@ -1,6 +1,5 @@
 
-value = 5;
-value_percent = value;
+value_percent = 5;
 $("#my-progress-bar").width(value_percent + '%');
 $("#my-progress-bar").text(value_percent + '%');
 
