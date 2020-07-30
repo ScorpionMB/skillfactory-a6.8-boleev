@@ -1,30 +1,25 @@
 
 value_percent = 5;
-$("#my-progress-bar").width(value_percent + '%');
-$("#my-progress-bar").text(value_percent + '%');
+function progressBar() {
+	$("#my-progress-bar").width(value_percent + '%');
+	$("#my-progress-bar").text(value_percent + '%');
+};
 
-const btnFirst = $('.j-first');
+progressBar();
 
-btnFirst.click(() => {
+$('.j-first').click(() => {
 	value_percent = value_percent + 1;
-	$("#my-progress-bar").width(value_percent + '%');
-  $("#my-progress-bar").text(value_percent + '%');
+	progressBar();
 });
 
-const btnSecond = $('.j-second');
-
-btnSecond.click(() => {
+$('.j-second').click(() => {
 	value_percent = value_percent + 3;
-	$("#my-progress-bar").width(value_percent + '%');
-  $("#my-progress-bar").text(value_percent + '%');
+	progressBar();
 });
 
-const btnThird = $('.j-third');
-
-btnThird.click(() => {
+$('.j-third').click(() => {
 	value_percent = value_percent + 7;
-	$("#my-progress-bar").width(value_percent + '%');
-  $("#my-progress-bar").text(value_percent + '%');
+	progressBar();
 });
 
 
