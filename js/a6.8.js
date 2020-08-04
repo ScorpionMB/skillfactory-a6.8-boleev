@@ -1,8 +1,14 @@
 
 value_percent = 5;
 function progressBar() {
-	$("#my-progress-bar").width(value_percent + '%');
-	$("#my-progress-bar").text(value_percent + '%');
+	if (value_percent >= 100) {
+		$("#my-progress-bar").width(100 + '%');
+		$("#my-progress-bar").text(100 + '%');
+	}
+	else {
+		$("#my-progress-bar").width(value_percent + '%');
+		$("#my-progress-bar").text(value_percent + '%');
+	}
 };
 
 progressBar();
@@ -21,5 +27,8 @@ $('.j-third').click(() => {
 	value_percent = value_percent + 7;
 	progressBar();
 });
+
+
+
 
 
